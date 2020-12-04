@@ -7,6 +7,6 @@ Project members:
 
 * Victor Lempitsky -- Research group leader, project leader
 * Alexey Larionov
-* Svetlana Koroleva
+* Svetlana Gabdullina
 * Alexander Nevarko
 * Konstantin Soshin
