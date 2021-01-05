@@ -1,3 +1,6 @@
 [submodule "capture"]
 	path = capture
 	url = https://github.com/laralex/kinect-telepresence-capture
+[submodule "immersion"]
+	path = immersion
+	url = https://github.com/laralex/kinect-telepresence-immersion
