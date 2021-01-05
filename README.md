@@ -10,3 +10,9 @@ Project members:
 * Svetlana Gabdullina
 * Alexander Nevarko
 * Konstantin Soshin
+
+# Installation
+
+The project consists of 2 parts executed by two different devices, both of them are submodules of this repository:
+1) Capture side [(one separate repo)](https://github.com/laralex/kinect-telepresence-capture)
+2) Immersion side [(second separate repo)](https://github.com/laralex/kinect-telepresence-immersion)
