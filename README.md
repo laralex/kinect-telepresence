@@ -61,9 +61,9 @@ docker run --privileged ktp
    [repository](https://github.com/microsoft/Azure-Kinect-Sensor-SDK). As of now
    they provide prebuilt binaries as MSI packages for Windows and Debian
    packages for Linux, but you can build the repository by yourself
-2) **(on Windows)** Add the path to the SDK in `K4A_DIR` (if you used an MSI
+2) **(on Windows)** Add the path to the SDK in `K4A_DIR` environment variable. If you used an MSI
    installer, then it probably looks like `C:\Program Files\Azure Kinect SDK
-   <version>`)
+   <version>`
 3) Install CMake (version atleast 3.10)
 4) Open a terminal and proceed to `capture/` folder
 5) Run
