@@ -30,7 +30,8 @@ The project consists of two additional repositories (submodules):
 As of now we don't have any prebuilt binaries for either Capture or Immersion
 side, so you'll need to build them on your own.
 
-Both submodules can be downloaded directly from this repository by running:
+Both submodules can be downloaded directly from this repository:
+**NOTE: `immersion` submodule might be large due to big number of assets used as of now**
 ```bash
 git clone --recursive https://github.com/laralex/kinect-telepresence.git
 ```
