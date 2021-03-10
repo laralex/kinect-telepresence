@@ -37,9 +37,21 @@ Both submodules can be downloaded directly from this repository:
 ```bash
 git clone --recursive https://github.com/laralex/kinect-telepresence.git
 ```
-or alternatively you can clone each repository separately.
+or alternatively you can clone each repository separately:
+*  [Capture side repository](https://github.com/laralex/kinect-telepresence-capture)
+```bash
+# equivalent ways
+git clone --recurse-submodules="capture" https://github.com/laralex/kinect-telepresence.git
+git clone --recursive https://github.com/laralex/kinect-telepresence-capture.git
+```
+* [Immersion side repository](https://github.com/laralex/kinect-telepresence-immersion)
+```bash
+# equivalent ways
+git clone --recurse-submodules="immersion" https://github.com/laralex/kinect-telepresence.git
+git clone --recursive https://github.com/laralex/kinect-telepresence-immersion.git
+```
 
-You don't have to use `--recursive` flag, unless you need to contribute to the corresponding `capture` or `immersion` submodule (for ML your probably don't). 
+Should you choose cloning this (main) repository, you don't have to use `--recursive` flag, unless you need to contribute to or compile the corresponding `capture` or `immersion` submodule to add you own submodules/unrelated code/changes, you may clone without `--recursive` flag. 
 
 ## Building Capture side [(repository)](https://github.com/laralex/kinect-telepresence-capture)
 Host desktop environment requirements:
@@ -70,15 +82,17 @@ docker run --privileged ktp
    installer, then it probably looks like `C:\Program Files\Azure Kinect SDK
    <version>`
 3) Install CMake (version atleast 3.10)
-4) Open a terminal and proceed to `capture/` folder
-5) Run
+4) For your ease, install `ninja` generator for C++ (if you prefer `make` or `cmake --build`, change following steps by yourself)
+5) Clone Capture side submodule (see above)
+6) Open a terminal and proceed to Capture side folder (contains Dockerfile, CMakeLists.txt)
+7) Run
 ```bash
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build .
+cmake .. -DCMAKE_BUILD_TYPE=Release -GNinja
+ninja
 ```
-6) Find the executables under `capture/build/release`, e.g. `capture_daemon.exe`
+6) Find the executables under `capture/build/release`, e.g. `ktp_capture_daemon.exe`
    which is a console application that runs indefinetely, or `all_tests.exe` that
    runs unit tests to check project integrity
 ## Building Immersion side [(repository)](https://github.com/laralex/kinect-telepresence-immersion)
